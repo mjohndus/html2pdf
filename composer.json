@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "mjohndus\\Html2Pdf\\": "src/"
+            "Spipu\\Html2Pdf\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "mjohndus\\Html2Pdf\\Tests\\": "Tests/"
+            "Spipu\\Html2Pdf\\Tests\\": "Tests/"
         }
     }
 }
