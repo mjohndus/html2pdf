@@ -7,32 +7,29 @@
  *
  * @package   Html2pdf
  * @author    Laurent MINGUET <webmaster@html2pdf.fr>
- * @copyright 2023 Laurent MINGUET
+ * @copyright 2017 Laurent MINGUET
  */
+
 namespace Spipu\Html2Pdf\Tag\Html;
-
 use Spipu\Html2Pdf\Tag\AbstractHtmlTag;
-
 /**
- * Tag U
+ * Tag StrikeTag
  */
-class U extends AbstractHtmlTag
+class StrikeTag extends AbstractHtmlTag
 {
-    /**
-     * @inheritdoc
-     */
-    public function getName()
+    public function __construct()
     {
-        return 'u';
+        parent::__construct('strike');
     }
 
-    /**
-     * @inheritdoc
-     */
+    public function getName()
+    {
+        return 'strike';
+    }
+
     protected function overrideStyles()
     {
-        $this->parsingCss->value['font-underline'] = true;
-
-        return $this;
+        $this->parsingCss->value['font-linethrough'] = true;
+        return true;
     }
 }

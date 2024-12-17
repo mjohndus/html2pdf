@@ -7,7 +7,7 @@
  *
  * @package   Html2pdf
  * @author    Laurent MINGUET <webmaster@html2pdf.fr>
- * @copyright 2017 Laurent MINGUET
+ * @copyright 2023 Laurent MINGUET
  */
 
 namespace Spipu\Html2Pdf;
@@ -81,7 +81,12 @@ class Locale
         self::$list = array();
         $handle = fopen($file, 'r');
         while (!feof($handle)) {
-            $line = fgetcsv($handle);
+            if (PHP_VERSION >= 80400) {
+                // As of PHP 8.4.0, depending on the default value of escape is deprecated.
+                $line = fgetcsv($handle, null, ',', '"', '\\');
+            } else {
+                $line = fgetcsv($handle);
+            }
             if (!is_array($line) || count($line) !=2) {
                 continue;
             }
