@@ -169,7 +169,7 @@ class Html2Pdf
      * @param mixed   $format      The format used for pages, same as TCPDF
      * @param string  $lang        Lang : fr, en, it...
      * @param boolean $unicode     TRUE means that the input text is unicode (default = true)
-     * @param String  $encoding    charset encoding; default is UTF-8
+     * @param string  $encoding    charset encoding; default is UTF-8
      * @param array   $margins     Default margins (left, top, right, bottom)
      * @param boolean $pdfa        If TRUE set the document to PDF/A mode.
      *
@@ -381,11 +381,11 @@ class Html2Pdf
     /**
      * set the debug mode to On
      *
-     * @param DebugInterface $debugObject
+     * @param DebugInterface|null $debugObject
      *
      * @return Html2Pdf $this
      */
-    public function setModeDebug(DebugInterface $debugObject = null)
+    public function setModeDebug($debugObject = null)
     {
         if (is_null($debugObject)) {
             $this->debug = new Debug();
