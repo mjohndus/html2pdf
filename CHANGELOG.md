@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [5.3.2](https://github.com/spipu/html2pdf/compare/v5.3.1...5.3.2) - 2025-04-25
+
+  * add readonly attribute support for input and textarea - thanks to @kkevinchoo
+  * improve Security service to be able to allow specific hosts
+  * update doc about Security service
+  * fix security issue on css background-image validation - thanks to Nikita Sveshnikov ([Positive Technologies](https://www.ptsecurity.com))
+  * fix security issue on image src validation - thanks to Nikita Sveshnikov ([Positive Technologies](https://www.ptsecurity.com))
+  * fix on Index creation if no bookmark - thanks to @rhulha
+  * fix tables getting moved to other pages and breaking styles by using specific class `html2pdf-same-page` on div container - thanks to @macr1408
+ 
 ## [5.3.1](https://github.com/spipu/html2pdf/compare/v5.3.0...v5.3.1) - 2025-02-26
 
   * add new Security service, that can be overridden
